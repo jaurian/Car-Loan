@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Car_Loan</string>
+    <string name="carcost">Cost of Vehicle:</string>
+    <string name="down">Down Payment:</string>
+    <string name="APR">APR:</string>
+    <string name="loan">Loan</string>
+    <string name="lease">Lease</string>
+    <string name="totalprompt">Monthly Payment:</string>
+    <string name="total">Total</string>
+    <string name="time">36 months</string>
+    <string name="month">months</string>
+
+</resources>

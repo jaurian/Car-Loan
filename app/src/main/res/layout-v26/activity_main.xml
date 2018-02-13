@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.car_loan.MainActivity">
+
+    <TextView
+        android:id="@+id/carcost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/carcost"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+         />
+    <TextView
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/carcost"
+        android:text="@string/down"
+        android:textSize="20sp"
+        android:layout_marginBottom="20sp"
+        />
+    <TextView
+        android:id="@+id/APR"
+        android:layout_below="@id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/APR"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:id="@+id/carinput"
+        android:labelFor="@id/carinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/carcost" />
+    <EditText
+        android:id="@+id/downinput"
+        android:labelFor="@id/downinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/down"
+        android:layout_below="@id/carinput"
+        android:inputType="numberDecimal"
+        android:ems="5"
+         />
+    <EditText
+        android:id="@+id/APRinput"
+        android:labelFor="@id/APRinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/APR"
+        android:layout_below="@id/downinput"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:textSize="20sp"
+        android:layout_marginStart="100sp"
+
+        />
+    <RadioGroup
+        android:id="@+id/selection"
+        android:layout_below="@id/APRinput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <RadioButton
+
+            android:id="@+id/loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loan"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/lease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lease" />
+
+    </RadioGroup>
+
+    <SeekBar
+        android:id="@+id/months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="250sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/selection"
+        android:max="60"
+        android:min="1"
+        android:progress="36"/>
+    <TextView
+        android:id="@+id/TotalPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selection"
+        android:layout_marginTop="50sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/totalprompt"
+        />
+
+</RelativeLayout>
