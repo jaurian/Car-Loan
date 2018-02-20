@@ -24,7 +24,7 @@
         />
     <TextView
         android:id="@+id/APR"
-        android:layout_below="@id/down"
+        android:layout_toRightOf="@id/downinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/APR"
@@ -38,7 +38,8 @@
         android:ems="5"
         android:inputType="numberDecimal"
         android:textSize="20sp"
-        android:layout_toEndOf="@id/carcost" />
+        android:layout_toEndOf="@id/carcost"
+        android:onClick="Calculate"/>
     <EditText
         android:id="@+id/downinput"
         android:labelFor="@id/downinput"
@@ -48,6 +49,7 @@
         android:layout_below="@id/carinput"
         android:inputType="numberDecimal"
         android:ems="5"
+        android:onClick="Calculate"
          />
     <EditText
         android:id="@+id/APRinput"
@@ -55,11 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/APR"
-        android:layout_below="@id/downinput"
         android:inputType="numberDecimal"
         android:ems="5"
         android:textSize="20sp"
         android:layout_marginStart="100sp"
+        android:onClick="Calculate"
 
         />
     <RadioGroup
@@ -69,7 +71,6 @@
         android:layout_marginTop="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         >
 
         <RadioButton
@@ -90,25 +91,24 @@
 
     <SeekBar
         android:id="@+id/months"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minWidth="250sp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/selection"
-        android:layout_marginTop="25sp"
+        android:layout_below="@+id/selection"
         android:max="60"
         android:min="1"
-        android:progress="36"
-        android:onClick="Calculate"/>
-
+        android:progress="36"/>
     <TextView
         android:id="@+id/TotalPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/months"
+        android:layout_below="@id/selection"
+        android:layout_marginTop="50sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
         android:text="@string/totalprompt"
-        android:textSize="20sp"/>
+        />
     <TextView
         android:id="@+id/output"
         android:layout_width="wrap_content"
@@ -120,9 +120,11 @@
         />
     <TextView
         android:id="@+id/timelabel"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/time"
         android:layout_below="@id/selection"
         android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

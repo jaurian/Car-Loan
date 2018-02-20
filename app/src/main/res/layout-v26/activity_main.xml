@@ -38,7 +38,8 @@
         android:ems="5"
         android:inputType="numberDecimal"
         android:textSize="20sp"
-        android:layout_toEndOf="@id/carcost" />
+        android:layout_toEndOf="@id/carcost"
+        android:onClick="Calculate"/>
     <EditText
         android:id="@+id/downinput"
         android:labelFor="@id/downinput"
@@ -48,6 +49,7 @@
         android:layout_below="@id/carinput"
         android:inputType="numberDecimal"
         android:ems="5"
+        android:onClick="Calculate"
          />
     <EditText
         android:id="@+id/APRinput"
@@ -60,6 +62,7 @@
         android:ems="5"
         android:textSize="20sp"
         android:layout_marginStart="100sp"
+        android:onClick="Calculate"
 
         />
     <RadioGroup
@@ -91,6 +94,7 @@
         android:id="@+id/months"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:minWidth="250sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/selection"
@@ -106,5 +110,22 @@
         android:layout_centerHorizontal="true"
         android:text="@string/totalprompt"
         />
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TotalPrompt"
+        android:text="@string/total"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/timelabel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:layout_below="@id/selection"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
